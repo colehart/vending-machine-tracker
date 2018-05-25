@@ -2,9 +2,7 @@ class CreateSnacks < ActiveRecord::Migration[5.1]
   def change
     create_table :snacks do |t|
       t.string :name
-      t.number :price
-
-      t.timestamps
+      t.decimal :price, precision: 2
     end
   end
 end

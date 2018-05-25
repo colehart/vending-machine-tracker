@@ -13,9 +13,8 @@ feature 'When a user visits a vending machine show page' do
   scenario 'the name of all of the snacks associated with that vending machine along with their price' do
     owner = Owner.create(name: "Sam's Snacks")
     dons  = owner.machines.create(location: "Don's Mixed Drinks")
-    snack1 = dons.snacks.create(name: 'kitkat', price: 2)
-    snack2 = dons.snacks.create(name: 'chips', price: 4)
-    average_price = snacks.average_price
+    snack1 = dons.snacks.create(name: 'kitkat', price: 2.00)
+    snack2 = dons.snacks.create(name: 'chips', price: 4.00)
 
     visit machine_path(dons)
 
@@ -28,8 +27,8 @@ feature 'When a user visits a vending machine show page' do
   scenario 'the name of all of the average price of snacks associated with that vending machine' do
     owner = Owner.create(name: "Sam's Snacks")
     dons  = owner.machines.create(location: "Don's Mixed Drinks")
-    snack1 = dons.snacks.create(name: 'kitkat', price: 2)
-    snack2 = dons.snacks.create(name: 'chips', price: 4)
+    snack1 = dons.snacks.create(name: 'kitkat', price: 2.00)
+    snack2 = dons.snacks.create(name: 'chips', price: 4.00)
     average_price = snacks.average_price
 
     visit machine_path(dons)
